@@ -26,11 +26,29 @@
     "plugins": [
       "expo-router",
       [
+        "expo-font",
+        {
+          "fonts": [
+            "./assets/fonts/Tajawal-ExtraLight.ttf",
+            "./assets/fonts/Tajawal-Light.ttf",
+            "./assets/fonts/Tajawal-Regular.ttf",
+            "./assets/fonts/Tajawal-Medium.ttf",
+            "./assets/fonts/Tajawal-Bold.ttf",
+            "./assets/fonts/Tajawal-ExtraBold.ttf",
+            "./assets/fonts/Tajawal-Black.ttf"
+          ]
+        }
+      ],
+      [
         "expo-splash-screen",
         {
-          "backgroundColor": "#208AEF",
+          "backgroundColor": "#fffdf5",
           "image": "./assets/images/splash-icon.png",
-          "imageWidth": 76
+          "imageWidth": 100,
+          "dark": {
+            "image": "./assets/images/splash-icon.png",
+            "backgroundColor": "#0b1120"
+          }
         }
       ]
     ],

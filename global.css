@@ -1,0 +1,76 @@
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/preflight.css" layer(base);
+@import "tailwindcss/utilities.css";
+
+@import "nativewind/theme";
+
+/* Keep tokens available as CSS variables, including those read by navigation. */
+@theme static {
+  --color-primary: #ffde10;
+  --color-primary-pressed: #ffd20d;
+  --color-primary-foreground: #101835;
+  --color-secondary: #101835;
+  --color-secondary-pressed: #1d294b;
+  --color-secondary-foreground: #ffffff;
+  --color-accent: #ffbf0b;
+  --color-background: #fffdf5;
+  --color-surface: #ffffff;
+  --color-surface-muted: #fff5c2;
+  --color-foreground: #101835;
+  --color-muted: #616779;
+  --color-border: #e4e6ed;
+  --color-onboarding-foreground: #0c1830;
+  --color-onboarding-muted: #858589;
+  --color-onboarding-yellow: #ffc400;
+  --color-onboarding-yellow-pressed: #efb600;
+  --color-onboarding-dot: #e7e7e9;
+
+  --font-sans: "Tajawal-Regular";
+  --font-tajawal: "Tajawal-Regular";
+  --font-tajawal-extra-light: "Tajawal-ExtraLight";
+  --font-tajawal-light: "Tajawal-Light";
+  --font-tajawal-medium: "Tajawal-Medium";
+  --font-tajawal-bold: "Tajawal-Bold";
+  --font-tajawal-extra-bold: "Tajawal-ExtraBold";
+  --font-tajawal-black: "Tajawal-Black";
+
+  --text-caption: 12px;
+  --text-caption--line-height: 20px;
+  --text-body: 16px;
+  --text-body--line-height: 26px;
+  --text-label: 16px;
+  --text-label--line-height: 26px;
+  --text-heading: 24px;
+  --text-heading--line-height: 36px;
+  --text-display: 36px;
+  --text-display--line-height: 50px;
+}
+
+/* Dark theme token overrides for system dark appearance */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-primary: #ffde10;
+    --color-primary-pressed: #ffd20d;
+    --color-primary-foreground: #101835;
+    --color-secondary: #f0f4ff;
+    --color-secondary-pressed: #cbd5e1;
+    --color-secondary-foreground: #101835;
+    --color-accent: #ffbf0b;
+    --color-background: #0b1120;
+    --color-surface: #141d33;
+    --color-surface-muted: #1c2847;
+    --color-foreground: #f8fafc;
+    --color-muted: #94a3b8;
+    --color-border: #233052;
+    --color-onboarding-foreground: #f8fafc;
+    --color-onboarding-muted: #94a3b8;
+    --color-onboarding-yellow: #ffc400;
+    --color-onboarding-yellow-pressed: #efb600;
+    --color-onboarding-dot: #2a3756;
+  }
+}
+
+/* Override NativeWind's platform-specific system font defaults. */
+:root {
+  --font-sans: var(--font-tajawal);
+}
